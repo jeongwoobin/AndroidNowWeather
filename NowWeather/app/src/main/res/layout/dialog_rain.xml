@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/umbrella"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_umbrella"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="10pt"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.25"
+        />
+    <TextView
+        android:id="@+id/tvRain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="비소식이 있습니다! \n우산 꼭 챙기세요!"
+        android:textStyle="bold"
+        android:textColor="@color/grey6"
+        android:layout_marginTop="5pt"
+        android:textSize="10pt"
+
+        app:layout_constraintTop_toBottomOf="@id/umbrella"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="24pt"
+        android:layout_marginTop="10pt"
+        android:background="@color/colorPrimary"
+        android:text="확인"
+        android:textSize="10pt"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRain"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

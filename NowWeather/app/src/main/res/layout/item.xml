@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/tvweekdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5pt"
+        android:text="11/11"
+        android:textSize="10pt"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@id/weatherLayout"
+        app:layout_constraintEnd_toEndOf="@id/weatherLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8pt"
+        android:layout_marginStart="15pt"
+        android:layout_marginEnd="15pt"
+        android:layout_marginTop="1pt"
+        android:layout_marginBottom="8pt"
+        android:elevation="5dp"
+        android:background="@drawable/white_radius_back"
+
+        app:layout_constraintTop_toBottomOf="@id/tvweekdate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_clear"
+            android:layout_marginStart="5dp"
+            android:adjustViewBounds="true"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+        <TextView
+            android:id="@+id/tvweekmintemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="최저기온"
+            android:textStyle="bold"
+            android:textSize="12pt"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvweekdes"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintEnd_toStartOf="@id/tvweekmaxtemp"/>
+
+        <TextView
+            android:id="@+id/tvweekmaxtemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="최고기온"
+            android:textColor="#FD5454"
+            android:textStyle="bold"
+            android:textSize="12pt"
+            android:gravity="center"
+
+            app:layout_constraintTop_toTopOf="@id/tvweekmintemp"
+            app:layout_constraintBottom_toBottomOf="@id/tvweekmintemp"
+            app:layout_constraintStart_toEndOf="@id/tvweekmintemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvweekdes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="날씨설명"
+            android:layout_marginTop="4pt"
+            android:gravity="center"
+            android:textSize="12pt"
+            android:textColor="#666666"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvweekmintemp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

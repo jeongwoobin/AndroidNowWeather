@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:fillViewport="true"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="도시이름"
+                android:textSize="12pt"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/weatherLayout"
+                app:layout_constraintEnd_toEndOf="@id/weatherLayout"
+                app:layout_constraintVertical_bias="0.08"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weatherLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10pt"
+                android:background="@drawable/white_radius_back"
+                android:elevation="5dp"
+                android:layout_marginStart="15pt"
+                android:layout_marginEnd="15pt"
+                android:layout_marginTop="10pt"
+                android:layout_marginBottom="10pt"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0">
+
+                <ImageView
+                    android:id="@+id/weatherImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_thunder"
+                    android:layout_marginTop="10pt"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.5"
+                    />
+
+                <TextView
+                    android:id="@+id/weatherDes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="날씨설명"
+                    android:textSize="10pt"
+                    android:textColor="#999999"
+                    android:gravity="center"
+                    android:layout_marginTop="6pt"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/weatherImg"
+                    />
+
+                <TextView
+                    android:id="@+id/curtemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="현재온도"
+                    android:textSize="18pt"
+                    android:gravity="center"
+                    android:layout_marginTop="10pt"
+                    android:textStyle="bold"
+                    android:textColor="#666666"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/weatherDes"
+                    />
+
+                <TextView
+                    android:id="@+id/minTempTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="최저"
+                    android:textSize="8pt"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="10pt"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/curtemp"
+                    app:layout_constraintEnd_toStartOf="@+id/maxTempTitle"/>
+
+                <TextView
+                    android:id="@+id/mintemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="최저온도"
+                    android:textSize="12pt"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3pt"
+
+                    app:layout_constraintTop_toBottomOf="@id/minTempTitle"
+                    app:layout_constraintStart_toStartOf="@id/minTempTitle"
+                    app:layout_constraintEnd_toEndOf="@id/minTempTitle"
+                    />
+
+                <TextView
+                    android:id="@+id/maxTempTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="최고"
+                    android:textSize="8pt"
+                    android:textColor="#FD5454"
+                    android:layout_marginTop="10pt"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/minTempTitle"
+                    app:layout_constraintTop_toBottomOf="@id/curtemp"/>
+
+                <TextView
+                    android:id="@+id/maxtemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="최고온도"
+                    android:textSize="12pt"
+                    android:gravity="center"
+                    android:textColor="#FD5454"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3pt"
+
+                    app:layout_constraintTop_toBottomOf="@id/maxTempTitle"
+                    app:layout_constraintStart_toStartOf="@id/maxTempTitle"
+                    app:layout_constraintEnd_toEndOf="@id/maxTempTitle"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
