@@ -11,6 +11,6 @@
 
 
 ** 스크린샷 **
-![Capture1](./image/1.jpg){: width="100" height="100"}
+![Capture1](./image/1.jpg =20x20)
 ![Capture2](./image/2.jpg)
 ![Capture3](./image/3.jpg)
