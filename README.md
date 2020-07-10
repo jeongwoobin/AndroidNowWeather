@@ -9,3 +9,8 @@
 
 
 
+
+** 스크린샷 **
+![Capture1](./image/1.jpg)
+![Capture2](./image/2.jpg)
+![Capture2](./image/3.jpg)
