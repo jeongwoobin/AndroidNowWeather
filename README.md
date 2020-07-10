@@ -11,6 +11,3 @@
 
 
 ** 스크린샷 **
-<img src="./image/1.JPG"  width="20" height="20">
-![Capture2](./image/2.jpg)
-![Capture3](./image/3.jpg)
